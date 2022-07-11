@@ -1,0 +1,27 @@
+<form>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col" ><span>Categorie</span></th>
+                <th scope="col" ><span>Description</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of categories; let i = index">
+                <th scope="row"><img class="mr-2" [src]="'../../assets/' + product.icon_name" style="width: 20px" /></th>
+                <td>{{ product.name }}</td>
+                <td>{{ product.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-between p-2">
+        <ngb-pagination ></ngb-pagination
+        ><select class="custom-select" style="width: auto" >
+            <option [ngValue]="2">2 items per page</option>
+            <option [ngValue]="4">4 items per page</option>
+            <option [ngValue]="6">6 items per page</option>
+        </select>
+    </div>
+</form>

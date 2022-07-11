@@ -1,0 +1,20 @@
+<form>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col" ><span>Categorie</span></th>
+                <th scope="col" ><span>Description</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of categories; let i = index">
+                <th scope="row">{{ product.id }}</th>
+                <td><img class="mr-2" [src]="'../../assets/' + product.icon_name" style="width: 20px" />{{ product.name }}</td>
+                <td>{{ product.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</form>
